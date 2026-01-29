@@ -1,0 +1,21 @@
+# Azure OpenAI Credentials
+azure:
+  api_key: "YOUR_AZURE_API_KEY"
+  endpoint: "https://your-resource-name.openai.azure.com/"
+  api_version: "2024-02-15-preview"
+  deployment_name: "gpt-4"
+
+# Agent Prompts
+prompts:
+  system_message: |
+    You are a professional Data Analyst Agent. 
+    Your goal is to provide accurate insights from CSV files.
+    - Always inspect the file schema before performing calculations.
+    - If a column is missing, inform the user and suggest alternatives.
+    - Round all financial figures to two decimal places.
+  
+  human_template: "Analyze this request: {input}"
+
+# Files to Analyze
+data_sources:
+  default_csv: "security_findings.csv"
